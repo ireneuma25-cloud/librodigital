@@ -18,6 +18,7 @@
                             bg: '#f9f8f6',
                             text: '#4a443c',
                             green: '#78907c',
+                            forest: '#2c4c3b',
                             terracotta: '#b85b3f',
                             sand: '#e8e2d5',
                             leaf: '#8ba390',
@@ -34,15 +35,21 @@
     </script>
 
     <style>
-        body { font-family: 'Montserrat', sans-serif; background-color: #f9f8f6; color: #4a443c; }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: #f9f8f6; 
+            color: #4a443c; 
+            background-image: radial-gradient(#e8e2d5 1.5px, transparent 1.5px);
+            background-size: 25px 25px;
+        }
         h1, h2, .font-handwriting { font-family: 'Caveat', cursive; }
         
         .page-content { display: none; animation: fadeIn 0.4s ease-in-out; }
         .page-content.active { display: block; }
         
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         .accordion-content {
@@ -54,13 +61,13 @@
 </head>
 <body class="antialiased min-h-screen flex flex-col selection:bg-nido-leaf selection:text-white">
 
-    <header class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50">
+    <header class="bg-white/95 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b-2 border-dashed border-nido-sand/80">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20 border-b border-nido-sand">
+            <div class="flex justify-between items-center h-20">
                 
-                <div class="flex-shrink-0 flex items-center gap-2 text-nido-terracotta cursor-pointer" onclick="navigate('page1')">
-                    <i class="fa-solid fa-seedling text-2xl"></i>
-                    <span class="font-handwriting text-3xl font-bold hidden sm:block">Escuela del Reencuentro</span>
+                <div class="flex-shrink-0 flex items-center gap-2 text-nido-terracotta cursor-pointer group" onclick="navigate('page1')">
+                    <i class="fa-solid fa-seedling text-2xl group-hover:rotate-12 transition-transform"></i>
+                    <span class="font-handwriting text-3xl font-bold hidden sm:block group-hover:text-nido-forest transition-colors">Escuela del Reencuentro</span>
                 </div>
                 
                 <nav class="hidden lg:flex space-x-1 overflow-x-auto">
@@ -82,7 +89,7 @@
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-md border-b border-nido-sand absolute w-full shadow-lg z-40">
+        <div id="mobile-menu" class="hidden lg:hidden bg-white/95 backdrop-blur-md border-b-2 border-dashed border-nido-sand absolute w-full shadow-lg z-40">
             <div class="px-4 pt-2 pb-4 space-y-2 flex flex-col max-h-[70vh] overflow-y-auto">
                 <button onclick="navigate('page1')" class="nav-btn-mobile w-full text-left px-4 py-3 rounded-lg text-sm font-bold bg-nido-green text-white">Inicio</button>
                 <button onclick="navigate('page2')" class="nav-btn-mobile w-full text-left px-4 py-3 rounded-lg text-sm font-medium hover:bg-nido-sand">Introducción</button>
@@ -99,23 +106,23 @@
     <main class="flex-grow w-full max-w-5xl mx-auto p-4 sm:p-6 lg:p-8 mt-2">
 
         <section id="page1" class="page-content active">
-            <div class="bg-nido-sand/40 rounded-[2rem] p-8 md:p-16 text-center border border-nido-sand shadow-sm relative overflow-hidden">
+            <div class="bg-white/80 backdrop-blur-sm rounded-[3rem] rounded-tr-3xl rounded-bl-3xl p-8 md:p-16 text-center border-4 border-dashed border-nido-sand shadow-sm relative overflow-hidden">
                 <div class="absolute -top-10 -left-10 w-40 h-40 bg-nido-green/10 rounded-full blur-3xl"></div>
                 <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-nido-mustard/10 rounded-full blur-3xl"></div>
                 
-                <h1 class="text-5xl md:text-7xl lg:text-8xl text-nido-green mb-4 relative z-10 leading-tight">La Escuela <br>del Reencuentro</h1>
-                <p class="text-2xl md:text-4xl font-handwriting text-nido-terracotta mb-12 relative z-10">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl text-nido-forest mb-4 relative z-10 leading-tight">La Escuela <br>del Reencuentro</h1>
+                <p class="text-xl md:text-3xl font-handwriting text-nido-terracotta mb-12 relative z-10">
                     "Habilitar los tiempos, cuidar los espacios y dar voz a la infancia."
                 </p>
 
-                <div class="mt-8 bg-white/80 backdrop-blur-sm rounded-2xl p-6 md:p-10 inline-block text-center shadow-lg relative z-10 w-full max-w-2xl border border-white">
-                    <h3 class="text-xl font-bold text-nido-green mb-6 border-b border-nido-green/20 pb-2 flex justify-center items-center gap-2"><i class="fa-solid fa-users"></i> Nuestro Equipo</h3>
+                <div class="mt-12 bg-nido-sand/20 backdrop-blur-md rounded-2xl p-6 md:p-10 inline-block text-center shadow-sm relative z-10 w-full max-w-3xl border border-white">
+                    <h3 class="text-xl font-bold text-nido-green mb-6 border-b-2 border-dashed border-nido-green/20 pb-2 flex justify-center items-center gap-2"><i class="fa-solid fa-users"></i> Nuestro Equipo</h3>
                     
                     <div class="flex flex-col items-center gap-4">
-                        <div class="bg-nido-sand/20 p-6 rounded-xl border border-nido-leaf/20 w-full flex flex-col items-center">
+                        <div class="bg-white p-8 rounded-[2rem] border border-nido-sand/50 w-full flex flex-col items-center shadow-sm hover:shadow-md transition-shadow">
                             
-                            <div class="mb-6 bg-white p-4 rounded-xl shadow-sm border border-nido-sand">
-                                <img src="logouma.png" alt="Logo Universidad de Málaga" class="h-28 md:h-32 object-contain">
+                            <div class="mb-6 bg-white p-6 rounded-full shadow-sm border-2 border-dashed border-nido-sand w-48 h-48 flex items-center justify-center">
+                                <img src="logouma.png" alt="Logo Universidad de Málaga" class="h-36 object-contain">
                             </div>
 
                             <p class="text-base md:text-lg leading-relaxed mb-4 text-gray-700">
@@ -126,7 +133,7 @@
                                 Irene Marín, Lucía Cuesta, Noelia Tejada, Cristina Moreno y Rebeca Aragón.
                             </p>
                         </div>
-                        <p class="text-sm text-nido-text/80 italic bg-nido-sand/50 px-6 py-2 rounded-lg mt-2 inline-block">
+                        <p class="text-sm text-nido-text/80 italic bg-nido-mustard/10 px-6 py-2 rounded-full mt-2 inline-block">
                             Asignatura: Organización Escolar en la E.I &nbsp;|&nbsp; Docente: Rocío Pascual Lacal
                         </p>
                     </div>
@@ -135,12 +142,12 @@
         </section>
 
         <section id="page2" class="page-content">
-            <div class="bg-white rounded-[2rem] p-8 md:p-12 shadow-sm border border-nido-sand">
-                <h2 class="text-4xl md:text-5xl text-nido-terracotta mb-8 border-b border-nido-sand pb-4"><i class="fa-solid fa-seedling mr-3 text-nido-leaf"></i>Introducción a nuestro modelo</h2>
+            <div class="bg-white/90 backdrop-blur-sm rounded-[3rem] p-8 md:p-12 shadow-sm border border-nido-sand">
+                <h2 class="text-4xl md:text-5xl text-nido-terracotta mb-8 border-b-2 border-dashed border-nido-sand pb-4"><i class="fa-solid fa-seedling mr-3 text-nido-leaf"></i>Introducción a nuestro modelo</h2>
                 
                 <div class="prose prose-lg max-w-none text-gray-700">
                     <p class="leading-relaxed mb-6">
-                        Para nosotras, organizar un centro de Educación Infantil va mucho más allá de cuadrar horarios o rellenar documentos. Entendemos la organización como una verdadera declaración de intenciones hacia los niños y niñas. Así nace <strong>La Escuela del Reencuentro</strong>.
+                        Para nosotras, organizar un centro de Educación Infantil va mucho más allá de cuadrar horarios o rellenar documentos. Entendemos la organización como una verdadera declaration de intenciones hacia los niños y niñas. Así nace <strong class="font-handwriting text-2xl text-nido-forest">La Escuela del Reencuentro</strong>.
                     </p>
                     
                     <p class="mb-8 leading-relaxed">
@@ -148,24 +155,24 @@
                     </p>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-                        <div class="bg-[#f0f4f1] p-8 rounded-2xl border-t-4 border-nido-green hover:-translate-y-1 transition-transform">
+                        <div class="bg-[#f0f4f1]/80 p-8 rounded-[2rem] rounded-tr-xl rounded-bl-xl border-t-4 border-dashed border-nido-green hover:-translate-y-1 transition-transform">
                             <i class="fa-solid fa-palette text-4xl text-nido-green mb-4"></i>
                             <h4 class="font-bold text-xl mb-3 text-nido-green">Reggio Emilia</h4>
                             <p class="text-sm text-gray-600">Apostamos por el cuidado de la estética, la documentación pedagógica y el espacio como el "Tercer Maestro".</p>
                         </div>
-                        <div class="bg-[#fdf9f3] p-8 rounded-2xl border-t-4 border-nido-mustard hover:-translate-y-1 transition-transform">
+                        <div class="bg-[#fdf9f3]/80 p-8 rounded-[2rem] rounded-tl-xl rounded-br-xl border-t-4 border-dashed border-nido-mustard hover:-translate-y-1 transition-transform">
                             <i class="fa-solid fa-tree text-4xl text-nido-mustard mb-4"></i>
                             <h4 class="font-bold text-xl mb-3 text-nido-mustard">Bosquescuela</h4>
                             <p class="text-sm text-gray-600">Concebimos la naturaleza como nuestra aula principal y respetamos los tiempos lentos de la infancia.</p>
                         </div>
-                        <div class="bg-[#fdf3f0] p-8 rounded-2xl border-t-4 border-nido-terracotta hover:-translate-y-1 transition-transform">
+                        <div class="bg-[#fdf3f0]/80 p-8 rounded-[2rem] rounded-tr-xl rounded-bl-xl border-t-4 border-dashed border-nido-terracotta hover:-translate-y-1 transition-transform">
                             <i class="fa-solid fa-child-reaching text-4xl text-nido-terracotta mb-4"></i>
                             <h4 class="font-bold text-xl mb-3 text-nido-terracotta">Inclusión real</h4>
                             <p class="text-sm text-gray-600">Es el espacio y la organización escolar lo que se adapta al niño, fomentando siempre su autonomía.</p>
                         </div>
                     </div>
 
-                    <div class="bg-nido-leaf text-white p-6 rounded-2xl text-center shadow-md">
+                    <div class="bg-nido-leaf/90 text-white p-6 rounded-full text-center shadow-sm">
                         <p class="font-medium text-lg">
                             <i class="fa-solid fa-compass mr-2"></i> Te invitamos a navegar por nuestro modelo, estructurado en los cuatro bloques fundamentales de nuestra propuesta.
                         </p>
@@ -175,37 +182,37 @@
         </section>
 
         <section id="page3" class="page-content">
-            <div class="mb-4 bg-nido-green/10 text-nido-green font-bold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider inline-block">Bloque 1</div>
-            <h2 class="text-4xl md:text-5xl font-handwriting text-nido-green mb-8 flex items-center gap-3">Concepto de Infancia y Modelo de Escuela</h2>
+            <div class="mb-4 bg-white border border-nido-green/30 text-nido-green font-bold px-5 py-2 rounded-full text-xs uppercase tracking-wider inline-block shadow-sm">Bloque 1</div>
+            <h2 class="text-4xl md:text-5xl font-handwriting text-nido-forest mb-8 flex items-center gap-3">Concepto de Infancia y Modelo de Escuela</h2>
             
             <div class="space-y-6">
-                <div class="bg-white p-8 rounded-3xl shadow-sm border border-nido-sand">
+                <div class="bg-white/90 backdrop-blur-sm p-8 rounded-[2rem] shadow-sm border border-nido-sand">
                     <h3 class="text-2xl font-bold text-nido-text mb-4">La infancia que sostiene nuestra organización</h3>
-                    <div class="flex flex-col lg:flex-row gap-8 items-center">
+                    <div class="flex flex-col lg:flex-row gap-10 items-center">
                         <div class="flex-1">
                             <p class="mb-4 text-gray-700 leading-relaxed">
                                 Cualquier escuela se construye sobre la idea previa que tenemos de los niños. En nuestro caso, tenemos claro que no son "adultos en miniatura" ni seres pasivos que solo vienen a escuchar.
                             </p>
-                            <p class="text-gray-700 leading-relaxed p-4 bg-nido-sand/30 rounded-xl border-l-4 border-nido-mustard">
+                            <p class="text-gray-700 leading-relaxed p-5 bg-[#fdf9f3] rounded-[2rem] rounded-tl-md border-l-4 border-dashed border-nido-mustard">
                                 Los vemos como <strong>constructores de cultura en comunidad</strong>. Como bien dice Trueba (2017), la infancia tiene un <strong>valor propio en sí misma</strong>; no podemos tratarla simplemente como una "sala de espera" preparatoria para el futuro.
                             </p>
                         </div>
                         
-                        <div class="w-full lg:w-1/2 h-72 md:h-96 bg-nido-sand/50 rounded-2xl flex items-center justify-center overflow-hidden shadow-md">
-                            <img src="foto-infancia.jpg" alt="Infancia" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                        <div class="w-full sm:w-2/3 lg:w-5/12 aspect-square bg-nido-sand/20 rounded-full border-[10px] border-nido-forest/80 flex items-center justify-center overflow-hidden shadow-lg p-1">
+                            <img src="foto-infancia.jpg" alt="Infancia" class="w-full h-full object-cover rounded-full hover:scale-105 transition-transform duration-700">
                         </div>
                     </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-nido-terracotta text-white p-8 rounded-3xl shadow-md">
-                        <h3 class="text-2xl font-bold mb-4 font-handwriting tracking-wide">El derecho a ser escuchado</h3>
-                        <i class="fa-solid fa-quote-left text-3xl opacity-20 mb-2"></i>
-                        <p class="leading-relaxed text-sm md:text-base">
-                            Queremos garantizar su derecho a expresarse. Loris Malaguzzi (2001) decía que los niños tienen <strong>"cien lenguajes"</strong> (el arte, el cuerpo, la naturaleza...) y que la escuela tradicional les suele robar noventa y nueve. Nuestra organización busca, precisamente, devolverles la voz.
+                    <div class="bg-nido-terracotta text-white p-8 rounded-[2rem] shadow-sm relative overflow-hidden">
+                        <div class="absolute -right-4 -bottom-4 text-white/10 text-9xl"><i class="fa-solid fa-ear-listen"></i></div>
+                        <h3 class="text-2xl font-bold mb-4 font-handwriting tracking-wide relative z-10">El derecho a ser escuchado</h3>
+                        <p class="leading-relaxed text-sm md:text-base relative z-10">
+                            Queremos garantizar su derecho a expresarse. Loris Malaguzzi (2001) decía que los niños tienen <strong>"cien lenguajes"</strong> (el arte, el cuerpo, the naturaleza...) y que la escuela tradicional les suele robar noventa y nueve. Nuestra organización busca, precisamente, devolverles la voz.
                         </p>
                     </div>
-                    <div class="bg-white p-8 rounded-3xl shadow-sm border border-nido-sand">
+                    <div class="bg-white/90 p-8 rounded-[2rem] shadow-sm border border-nido-sand border-b-4 border-b-nido-green">
                         <h3 class="text-xl font-bold text-nido-green mb-4">Inclusión y Marco Legal</h3>
                         <p class="leading-relaxed text-gray-700">
                             Amparados en la norma estatal <strong>LOMLOE (art. 12-14)</strong> y el <strong>Decreto 100/2023</strong> de Andalucía, en nuestro modelo de escuela es <strong>la organización y el espacio lo que se adapta al niño/a</strong>, y no al revés. Esta es la única forma de garantizar una inclusión real desde la propia estructura escolar.
@@ -216,18 +223,18 @@
         </section>
 
         <section id="page4" class="page-content">
-            <div class="mb-4 bg-nido-mustard/20 text-nido-mustard font-bold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider inline-block">Bloque 2</div>
+            <div class="mb-4 bg-white border border-nido-mustard/30 text-nido-mustard font-bold px-5 py-2 rounded-full text-xs uppercase tracking-wider inline-block shadow-sm">Bloque 2</div>
             <div class="mb-10">
-                <h2 class="text-5xl font-handwriting text-nido-green mb-3">Dimensión Material: Espacios y Tiempos</h2>
+                <h2 class="text-5xl font-handwriting text-nido-forest mb-3">Dimensión Material: Espacios y Tiempos</h2>
                 <p class="text-gray-600">Cómo organizamos el entorno físico de la escuela</p>
             </div>
             
             <div class="flex flex-col gap-8">
-                <div class="bg-white p-8 md:p-10 rounded-[2rem] shadow-sm border border-nido-sand relative overflow-hidden group">
+                <div class="bg-white/90 backdrop-blur-sm p-8 md:p-10 rounded-[3rem] rounded-tl-xl shadow-sm border border-nido-sand relative overflow-hidden group">
                     <div class="absolute -right-10 -top-10 w-48 h-48 bg-nido-leaf/10 rounded-full transition-transform group-hover:scale-150 duration-700"></div>
                     <div class="relative z-10 flex flex-col md:flex-row gap-8 items-center">
                         <div class="w-full md:w-1/3 flex justify-center">
-                            <div class="w-32 h-32 bg-nido-leaf/20 rounded-full flex items-center justify-center text-nido-leaf">
+                            <div class="w-32 h-32 bg-white rounded-full border-4 border-dashed border-nido-leaf/50 flex items-center justify-center text-nido-leaf shadow-sm">
                                 <i class="fa-solid fa-house-chimney-window text-5xl"></i>
                             </div>
                         </div>
@@ -243,10 +250,10 @@
                     </div>
                 </div>
 
-                <div class="bg-nido-sand p-8 md:p-10 rounded-[2rem] shadow-sm border border-white relative overflow-hidden group">
+                <div class="bg-nido-sand/40 backdrop-blur-sm p-8 md:p-10 rounded-[3rem] rounded-br-xl shadow-sm border border-nido-sand relative overflow-hidden group">
                     <div class="relative z-10 flex flex-col md:flex-row-reverse gap-8 items-center">
                         <div class="w-full md:w-1/3 flex justify-center">
-                            <div class="w-32 h-32 bg-white rounded-full flex items-center justify-center text-nido-mustard shadow-inner">
+                            <div class="w-32 h-32 bg-white rounded-full border-4 border-dashed border-nido-mustard/50 flex items-center justify-center text-nido-mustard shadow-sm">
                                 <i class="fa-regular fa-hourglass-half text-5xl"></i>
                             </div>
                         </div>
@@ -265,33 +272,37 @@
         </section>
 
         <section id="page5" class="page-content">
-            <div class="mb-4 bg-nido-terracotta/10 text-nido-terracotta font-bold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider inline-block mx-auto table">Bloque 2</div>
+            <div class="mb-4 bg-white border border-nido-terracotta/30 text-nido-terracotta font-bold px-5 py-2 rounded-full text-xs uppercase tracking-wider inline-block mx-auto table shadow-sm">Bloque 2</div>
             <h2 class="text-5xl md:text-6xl font-handwriting text-nido-terracotta mb-2 text-center">Nuestra Provocación</h2>
-            <p class="text-center text-nido-text/70 mb-8 font-semibold uppercase tracking-widest text-xs">El Viaje Sensorial de las Estaciones</p>
+            <p class="text-center text-nido-text/70 mb-8 font-semibold uppercase tracking-widest text-xs flex justify-center gap-2 items-center">
+                <span class="w-10 h-px bg-nido-terracotta/50"></span>
+                El Viaje Sensorial de las Estaciones
+                <span class="w-10 h-px bg-nido-terracotta/50"></span>
+            </p>
             
-            <div class="bg-white rounded-[2rem] overflow-hidden shadow-lg border border-nido-sand mb-8">
+            <div class="bg-white/90 backdrop-blur-sm rounded-[3rem] overflow-hidden shadow-sm border border-nido-sand mb-8">
                 
-                <div class="h-80 md:h-[400px] bg-[#e9e3d9] relative border-b-8 border-nido-terracotta group cursor-pointer overflow-hidden">
-                    <img src="foto-mandala.jpg" alt="Provocación del Mandala" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
-                    <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10 bg-black/20">
-                        <div class="bg-white/90 backdrop-blur p-6 rounded-full w-24 h-24 flex items-center justify-center mb-6 shadow-xl">
+                <div class="h-80 md:h-[450px] bg-[#e9e3d9] relative border-b-[12px] border-nido-forest group cursor-pointer overflow-hidden">
+                    <img src="foto-mandala.jpg" alt="Provocación del Mandala" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 opacity-90 mix-blend-multiply">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-10 bg-gradient-to-t from-nido-forest/60 to-transparent">
+                        <div class="bg-white/90 backdrop-blur p-6 rounded-full border-4 border-dashed border-nido-terracotta/50 w-24 h-24 flex items-center justify-center mb-6 shadow-xl hover:rotate-12 transition-transform">
                             <i class="fa-solid fa-camera-retro text-4xl text-nido-terracotta"></i>
                         </div>
-                        <h3 class="text-3xl font-bold text-nido-text bg-white/95 px-6 py-2 rounded-lg shadow-sm mb-2">El Viaje Sensorial</h3>
+                        <h3 class="text-3xl font-bold text-nido-text bg-white/95 px-8 py-3 rounded-full shadow-sm mb-2">El Viaje Sensorial</h3>
                     </div>
                 </div>
 
                 <div class="p-8 md:p-12">
-                    <p class="mb-8 text-gray-700 leading-relaxed text-center max-w-3xl mx-auto">
+                    <p class="mb-8 text-gray-700 leading-relaxed text-center max-w-3xl mx-auto text-lg">
                         Para llevar a la práctica nuestro modelo, hemos diseñado una provocación sensorial. Se trata de un escenario preparado con gran intencionalidad pedagógica y cuidado, sin instrucciones de uso, pensado exclusivamente para despertar el asombro y la acción autónoma del alumnado, que se convierte así en constructor de su propio aprendizaje.
                     </p>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                         <div>
-                            <h3 class="text-2xl font-bold text-nido-green mb-6 border-b border-nido-sand pb-2">Fundamentación teórica</h3>
+                            <h3 class="text-2xl font-bold text-nido-forest mb-6 border-b-2 border-dashed border-nido-sand pb-2">Fundamentación teórica</h3>
                             <ul class="space-y-6">
                                 <li class="flex items-start">
-                                    <div class="w-8 h-8 rounded-full bg-nido-leaf/20 flex items-center justify-center text-nido-leaf shrink-0 mt-1 mr-4 font-bold">
+                                    <div class="w-10 h-10 rounded-full bg-white border-2 border-dashed border-nido-leaf flex items-center justify-center text-nido-leaf shrink-0 mt-1 mr-4 font-bold shadow-sm">
                                         1
                                     </div>
                                     <div>
@@ -300,7 +311,7 @@
                                     </div>
                                 </li>
                                 <li class="flex items-start">
-                                    <div class="w-8 h-8 rounded-full bg-nido-mustard/20 flex items-center justify-center text-nido-mustard shrink-0 mt-1 mr-4 font-bold">
+                                    <div class="w-10 h-10 rounded-full bg-white border-2 border-dashed border-nido-mustard flex items-center justify-center text-nido-mustard shrink-0 mt-1 mr-4 font-bold shadow-sm">
                                         2
                                     </div>
                                     <div>
@@ -312,33 +323,33 @@
                         </div>
 
                         <div>
-                            <h3 class="text-2xl font-bold text-nido-terracotta mb-6 border-b border-nido-sand pb-2">Nuestros recursos</h3>
+                            <h3 class="text-2xl font-bold text-nido-terracotta mb-6 border-b-2 border-dashed border-nido-sand pb-2">Nuestros recursos</h3>
                             
-                            <div class="border border-nido-sand rounded-2xl overflow-hidden shadow-sm">
-                                <button onclick="toggleAccordion('materials-acc')" class="w-full flex justify-between items-center p-5 bg-nido-sand/40 hover:bg-nido-sand transition-colors text-left focus:outline-none">
-                                    <span class="font-bold text-nido-text">¿Qué usamos en nuestra instalación?</span>
-                                    <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center shadow-sm">
+                            <div class="border border-nido-sand rounded-[2rem] overflow-hidden shadow-sm">
+                                <button onclick="toggleAccordion('materials-acc')" class="w-full flex justify-between items-center p-6 bg-[#fdf9f3] hover:bg-nido-sand/50 transition-colors text-left focus:outline-none group">
+                                    <span class="font-bold text-nido-text text-lg">¿Qué usamos en la instalación?</span>
+                                    <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm border border-nido-sand group-hover:scale-110 transition-transform">
                                         <i id="materials-acc-icon" class="fa-solid fa-chevron-down transition-transform duration-300 text-nido-terracotta"></i>
                                     </div>
                                 </button>
                                 <div id="materials-acc" class="accordion-content bg-white">
-                                    <div class="p-6 space-y-4">
-                                        <div class="p-4 bg-orange-50 rounded-xl border border-orange-100 flex gap-4 items-center">
-                                            <i class="fa-brands fa-canadian-maple-leaf text-2xl text-orange-400"></i>
+                                    <div class="p-6 space-y-4 border-t border-nido-sand/50">
+                                        <div class="p-5 bg-white rounded-2xl border-2 border-dashed border-orange-100 flex gap-4 items-center">
+                                            <i class="fa-brands fa-canadian-maple-leaf text-3xl text-orange-400"></i>
                                             <div>
                                                 <strong class="text-orange-800 text-sm">Elementos de otoño</strong>
-                                                <p class="text-xs text-orange-600 mt-1">Integramos elementos como hojas secas y cilindros de madera que ofrecen texturas únicas y sonidos naturales al manipularlos.</p>
+                                                <p class="text-xs text-gray-600 mt-1">Integramos elementos como hojas secas y cilindros de madera que ofrecen texturas únicas y sonidos naturales al manipularlos.</p>
                                             </div>
                                         </div>
-                                        <div class="p-4 bg-green-50 rounded-xl border border-green-100 flex gap-4 items-center">
-                                            <i class="fa-solid fa-lemon text-2xl text-green-500"></i>
+                                        <div class="p-5 bg-white rounded-2xl border-2 border-dashed border-green-100 flex gap-4 items-center">
+                                            <i class="fa-solid fa-lemon text-3xl text-green-500"></i>
                                             <div>
                                                 <strong class="text-green-800 text-sm">Cítricos y flores</strong>
-                                                <p class="text-xs text-green-600 mt-1">Usamos naranjas y limones frescos para estimular el olfato y generar contrastes visuales muy atractivos.</p>
+                                                <p class="text-xs text-gray-600 mt-1">Usamos naranjas y limones frescos para estimular el olfato y generar contrastes visuales muy atractivos.</p>
                                             </div>
                                         </div>
-                                        <div class="p-4 bg-gray-50 rounded-xl border border-gray-200 flex gap-4 items-center">
-                                            <i class="fa-solid fa-cubes-stacked text-2xl text-gray-500"></i>
+                                        <div class="p-5 bg-white rounded-2xl border-2 border-dashed border-gray-200 flex gap-4 items-center">
+                                            <i class="fa-solid fa-cubes-stacked text-3xl text-gray-400"></i>
                                             <div>
                                                 <strong class="text-gray-800 text-sm">Elementos contenedores y estructurantes</strong>
                                                 <p class="text-xs text-gray-600 mt-1">Hueveras de cartón, cilindros de cartón y morteros de madera. Son fundamentales porque invitan a los niños a realizar trasvases, practicar el agarre de pinza y empezar a clasificar de forma intuitiva.</p>
@@ -354,12 +365,12 @@
         </section>
 
         <section id="page6" class="page-content">
-            <div class="mb-4 bg-nido-leaf/10 text-nido-leaf font-bold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider inline-block mx-auto table">Bloque 3</div>
-            <h2 class="text-4xl font-handwriting text-nido-green mb-8 text-center">Dimensión Humana y Relacional</h2>
+            <div class="mb-4 bg-white border border-nido-leaf/30 text-nido-leaf font-bold px-5 py-2 rounded-full text-xs uppercase tracking-wider inline-block mx-auto table shadow-sm">Bloque 3</div>
+            <h2 class="text-4xl font-handwriting text-nido-forest mb-8 text-center">Dimensión Humana y Relacional</h2>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-nido-sand flex flex-col items-center text-center group hover:shadow-md transition-shadow">
-                    <div class="w-20 h-20 bg-nido-leaf/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-nido-leaf/20 transition-colors">
+                <div class="bg-white/90 p-8 rounded-[3rem] rounded-tl-xl shadow-sm border border-nido-sand flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-20 h-20 bg-white border-4 border-dashed border-nido-leaf/40 rounded-full flex items-center justify-center mb-6 group-hover:border-nido-leaf transition-colors">
                         <i class="fa-solid fa-chalkboard-user text-nido-leaf text-3xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4 text-nido-text">La Pareja Educativa</h3>
@@ -368,8 +379,8 @@
                     </p>
                 </div>
 
-                <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-nido-sand flex flex-col items-center text-center group hover:shadow-md transition-shadow">
-                    <div class="w-20 h-20 bg-nido-mustard/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-nido-mustard/20 transition-colors">
+                <div class="bg-white/90 p-8 rounded-[3rem] shadow-sm border border-nido-sand flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-20 h-20 bg-white border-4 border-dashed border-nido-mustard/40 rounded-full flex items-center justify-center mb-6 group-hover:border-nido-mustard transition-colors">
                         <i class="fa-solid fa-hands-holding-child text-nido-mustard text-3xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4 text-nido-text">Familias Aliadas e Inclusión</h3>
@@ -378,8 +389,8 @@
                     </p>
                 </div>
 
-                <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-nido-sand flex flex-col items-center text-center group hover:shadow-md transition-shadow">
-                    <div class="w-20 h-20 bg-nido-terracotta/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-nido-terracotta/20 transition-colors">
+                <div class="bg-white/90 p-8 rounded-[3rem] rounded-br-xl shadow-sm border border-nido-sand flex flex-col items-center text-center group hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-20 h-20 bg-white border-4 border-dashed border-nido-terracotta/40 rounded-full flex items-center justify-center mb-6 group-hover:border-nido-terracotta transition-colors">
                         <i class="fa-solid fa-sitemap text-nido-terracotta text-3xl"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-4 text-nido-text">Cultura del Encuentro</h3>
@@ -391,46 +402,65 @@
         </section>
 
         <section id="page7" class="page-content">
-            <div class="bg-white rounded-[2rem] p-8 md:p-12 shadow-sm border border-nido-sand">
-                <div class="mb-4 bg-nido-terracotta/10 text-nido-terracotta font-bold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider inline-block">Bloque 4</div>
-                <h2 class="text-4xl md:text-5xl font-handwriting text-nido-green mb-10"><i class="fa-solid fa-eye mr-3"></i>Evaluación y Mejora Organizativa</h2>
+            <div class="bg-white/90 backdrop-blur-sm rounded-[3rem] p-8 md:p-12 shadow-sm border border-nido-sand">
+                <div class="mb-4 bg-white border border-nido-terracotta/30 text-nido-terracotta font-bold px-5 py-2 rounded-full text-xs uppercase tracking-wider inline-block shadow-sm">Bloque 4</div>
+                <h2 class="text-4xl md:text-5xl font-handwriting text-nido-forest mb-10"><i class="fa-solid fa-eye mr-3"></i>Evaluación y Mejora Organizativa</h2>
                 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                     
                     <div>
-                        <h3 class="text-2xl font-bold text-nido-text mb-4">Evaluación formativa e inclusiva</h3>
-                        <div class="bg-nido-sand/30 p-5 rounded-2xl border-l-4 border-nido-terracotta mb-4">
-                            <p class="text-gray-800 font-semibold">
-                                Los resultados académicos <span class="text-nido-terracotta underline">no se evalúan</span>.
-                            </p>
-                        </div>
-                        <p class="text-gray-700 leading-relaxed mb-8">
-                            Lo que sí evaluamos es si nuestro modelo organizativo funciona, observando detalladamente la interacción con la provocación. Nuestro foco de evaluación se basa en hacernos estas preguntas clave: <em>¿El espacio permite verdaderamente la autonomía? ¿Los materiales naturales generan curiosidad?</em>
-                        </p>
-
-                        <h3 class="text-2xl font-bold text-nido-text mb-4">Revisión y Mejora Continua</h3>
-                        <ul class="space-y-4 text-gray-700">
-                            <li class="flex items-start gap-4">
-                                <i class="fa-solid fa-users text-nido-mustard mt-1 text-xl"></i>
+                        <h3 class="text-2xl font-bold text-nido-text mb-6">Evaluación formativa e inclusiva</h3>
+                        
+                        <div class="border-4 border-dashed border-nido-sand/50 rounded-[3rem] p-8 md:p-10 mb-8 space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-nido-terracotta/10 border-2 border-dashed border-nido-terracotta flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-xmark text-nido-terracotta"></i>
+                                </div>
                                 <div>
-                                    <strong>Participación en asambleas:</strong> Las familias y los docentes analizan de manera conjunta la documentación tomada en las provocaciones.
+                                    <strong class="block text-nido-text text-lg">No evaluamos resultados académicos</strong> 
+                                    <p class="text-sm text-gray-600 mt-1">Los resultados académicos <span class="text-nido-terracotta underline decoration-wavy ml-1">no se evalúan</span>, garantizando una inclusión real sin comparaciones.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-nido-green/10 border-2 border-dashed border-nido-green flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-check text-nido-green"></i>
+                                </div>
+                                <div>
+                                    <strong class="block text-nido-text text-lg">Evaluamos el modelo organizativo</strong> 
+                                    <p class="text-sm text-gray-600 mt-1">Lo que sí evaluamos es si nuestro modelo organizativo funciona, observando detalladamente la interacción con la provocación.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-2xl font-bold text-nido-forest mb-4 border-b-2 border-dashed border-nido-sand pb-2">Revisión y Mejora Continua</h3>
+                        <ul class="space-y-5 text-gray-700 mt-6">
+                            <li class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-white border-2 border-dashed border-nido-mustard flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-users text-nido-mustard"></i>
+                                </div>
+                                <div>
+                                    <strong class="block text-nido-text">Participación en asambleas:</strong> Las familias y los docentes analizan de manera conjunta la documentación tomada en las provocaciones.
                                 </div>
                             </li>
                             <li class="flex items-start gap-4">
-                                <i class="fa-solid fa-book-open text-nido-leaf mt-1 text-xl"></i>
+                                <div class="w-10 h-10 rounded-full bg-white border-2 border-dashed border-nido-leaf flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-book-open text-nido-leaf"></i>
+                                </div>
                                 <div>
-                                    <strong>Memoria de Autoevaluación:</strong> Todo lo analizado se plasma en este documento, que recoge compromisos firmes de mejora para la organización del curso.
+                                    <strong class="block text-nido-text">Memoria de Autoevaluación:</strong> Todo lo analizado se plasma en este documento, que recoge compromisos firmes de mejora para la organización del curso.
                                 </div>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="bg-[#f9f8f6] rounded-3xl p-8 md:p-10 border border-nido-sand flex flex-col justify-center items-center shadow-sm h-full">
-                        <div class="w-full overflow-hidden rounded-2xl mb-6 shadow-sm">
-                            <img src="prov-desc.jpeg" alt="Documentación de la provocación" class="w-full h-48 md:h-56 object-cover hover:scale-105 transition-transform duration-700">
+                    <div class="bg-[#f9f8f6] rounded-[3rem] p-8 md:p-10 border-4 border-dashed border-nido-sand flex flex-col justify-center items-center shadow-sm h-full relative">
+                        <div class="absolute -top-3 left-1/2 -translate-x-1/2 w-20 h-6 bg-white/50 backdrop-blur-sm shadow-sm rotate-2"></div>
+                        
+                        <div class="w-full overflow-hidden rounded-[2rem] rounded-tr-md rounded-bl-md border-4 border-nido-green/20 mb-8 shadow-md group">
+                            <img src="prov-desc.jpeg" alt="Documentación de la provocación" class="w-full h-56 md:h-64 object-cover group-hover:scale-105 transition-transform duration-700">
                         </div>
                         <h4 class="text-3xl font-handwriting text-nido-terracotta text-center mb-4">Hacer visible lo invisible</h4>
-                        <p class="text-gray-700 leading-relaxed text-center italic">
+                        <p class="text-gray-700 leading-relaxed text-center italic text-sm">
                             "El desorden final que el adulto percibe en la instalación estacional constituye, para nosotras, la prueba documentada y visible de que el aprendizaje y la experimentación han sucedido."
                         </p>
                     </div>
@@ -440,44 +470,48 @@
         </section>
 
         <section id="page8" class="page-content">
-            <h2 class="text-4xl text-nido-green mb-8 flex items-center gap-3"><i class="fa-solid fa-book-open"></i> Reflexión Final y Referencias</h2>
+            <h2 class="text-4xl text-nido-forest mb-8 flex items-center gap-3"><i class="fa-solid fa-book-open text-nido-leaf"></i> Reflexión Final y Referencias</h2>
             
-            <div class="bg-nido-sand/40 p-8 md:p-12 rounded-[2rem] shadow-sm border border-nido-sand mb-8">
-                <h3 class="text-3xl font-handwriting text-nido-terracotta mb-6">Reflexión sobre nuestro proyecto</h3>
+            <div class="bg-white/90 p-8 md:p-12 rounded-[3rem] shadow-sm border border-nido-sand mb-8">
+                <h3 class="text-3xl font-handwriting text-nido-terracotta mb-6 flex items-center gap-2">
+                    <i class="fa-regular fa-lightbulb text-2xl"></i> Reflexión sobre nuestro proyecto
+                </h3>
                 <div class="prose prose-lg max-w-none text-gray-700">
                     <p class="mb-4 leading-relaxed">
                         Llevar a la práctica este modelo organizativo nos ha demostrado la importancia vital que tienen el tiempo y el espacio en la educación. Como futuras docentes, solemos preocuparnos mucho por "qué" vamos a enseñar, olvidando que el "dónde" y el "cómo" educan de forma silenciosa pero muy potente.
                     </p>
-                    <p class="mb-6 leading-relaxed">
+                    <p class="mb-0 leading-relaxed p-6 bg-nido-sand/20 rounded-[2rem] border-l-4 border-nido-green">
                         Diseñar la instalación del "Viaje Sensorial" nos ha permitido comprobar que cuando le ofreces a la infancia un entorno estético, seguro y respetuoso con sus ritmos, no hace falta dirigirles ni decirles constantemente lo que tienen que hacer; el aprendizaje, la concentración y el asombro surgen de forma natural y genuina.
                     </p>
                 </div>
             </div>
 
-            <div class="bg-white p-8 md:p-10 rounded-[2rem] shadow-sm border border-gray-200">
-                <h3 class="text-xl font-bold text-gray-800 mb-6 uppercase tracking-wider text-sm"><i class="fa-solid fa-bookmark text-nido-leaf mr-2"></i> Referencias Bibliográficas</h3>
+            <div class="bg-white p-8 md:p-10 rounded-[3rem] shadow-sm border-t-8 border-nido-sand">
+                <h3 class="text-xl font-bold text-gray-800 mb-6 uppercase tracking-wider text-sm flex items-center"><i class="fa-solid fa-bookmark text-nido-leaf mr-3 text-lg"></i> Referencias Bibliográficas</h3>
                 <ul class="space-y-4 text-sm text-gray-600 pl-4 list-none">
-                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-sand before:rounded-full">Abad Molina, J., y Ruiz de Velasco Gálvez, Á. (2011). <em>El juego simbólico</em>. Octaedro.</li>
-                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-sand before:rounded-full">Bosch, R. (2018). <em>Diseñar para un mundo mejor empieza en la escuela</em>. Rosan Bosch Studio.</li>
-                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-sand before:rounded-full">Dahlberg, G., Moss, P., y Pence, A. (2005). <em>Más allá de la calidad en educación infantil</em>. Graó.</li>
-                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-sand before:rounded-full">Decreto 100/2023, de 30 de mayo, por el que se establece la ordenación y las enseñanzas mínimas de la etapa de Educación Infantil en la Comunidad Autónoma de Andalucía. (2023). <em>BOJA, 104</em>, de 2 de junio de 2023.</li>
-                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-sand before:rounded-full">Hoyuelos, A. (2005). <em>La ética en el pensamiento y obra pedagógica de Loris Malaguzzi</em>. Octaedro.</li>
-                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-sand before:rounded-full">Ley Orgánica 3/2020, de 29 de diciembre, por la que se modifica la Ley Orgánica 2/2006, de 3 de mayo, de Educación. (2020). <em>Boletín Oficial del Estado, 340</em>, de 30 de diciembre de 2020.</li>
-                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-sand before:rounded-full">Malaguzzi, L. (2001). <em>La educación infantil en Reggio Emilia</em>. Octaedro.</li>
-                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-sand before:rounded-full">Nicholson, S. (1971). How not to cheat children: The theory of loose parts. <em>Landscape Architecture, 62</em>(1), 30-34.</li>
-                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-sand before:rounded-full">Pascual Lacal, R. (2024). <em>La cultura de la infancia como pilar de la organización escolar</em> [Manual de la asignatura]. Universidad de Málaga.</li>
-                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-sand before:rounded-full">Rinaldi, C. (2006). <em>En diálogo con Reggio Emilia: Escuchar, investigar y aprender</em>. Octaedro.</li>
-                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-sand before:rounded-full">Trueba, B. (2017). <em>Espacios en juego</em>. Octaedro.</li>
+                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-terracotta before:rounded-full">Abad Molina, J., y Ruiz de Velasco Gálvez, Á. (2011). <em>El juego simbólico</em>. Octaedro.</li>
+                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-mustard before:rounded-full">Bosch, R. (2018). <em>Diseñar para un mundo mejor empieza en la escuela</em>. Rosan Bosch Studio.</li>
+                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-green before:rounded-full">Dahlberg, G., Moss, P., y Pence, A. (2005). <em>Más allá de la calidad en educación infantil</em>. Graó.</li>
+                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-leaf before:rounded-full">Decreto 100/2023, de 30 de mayo, por el que se establece la ordenación y las enseñanzas mínimas de la etapa de Educación Infantil en la Comunidad Autónoma de Andalucía. (2023). <em>BOJA, 104</em>, de 2 de junio de 2023.</li>
+                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-terracotta before:rounded-full">Hoyuelos, A. (2005). <em>La ética en el pensamiento y obra pedagógica de Loris Malaguzzi</em>. Octaedro.</li>
+                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-mustard before:rounded-full">Ley Orgánica 3/2020, de 29 de diciembre, por la que se modifica la Ley Orgánica 2/2006, de 3 de mayo, de Educación. (2020). <em>Boletín Oficial del Estado, 340</em>, de 30 de diciembre de 2020.</li>
+                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-green before:rounded-full">Malaguzzi, L. (2001). <em>La educación infantil en Reggio Emilia</em>. Octaedro.</li>
+                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-leaf before:rounded-full">Nicholson, S. (1971). How not to cheat children: The theory of loose parts. <em>Landscape Architecture, 62</em>(1), 30-34.</li>
+                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-terracotta before:rounded-full">Pascual Lacal, R. (2024). <em>La cultura de la infancia como pilar de la organización escolar</em> [Manual de la asignatura]. Universidad de Málaga.</li>
+                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-mustard before:rounded-full">Rinaldi, C. (2006). <em>En diálogo con Reggio Emilia: Escuchar, investigar y aprender</em>. Octaedro.</li>
+                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-green before:rounded-full">Trueba, B. (2017). <em>Espacios en juego</em>. Octaedro.</li>
                 </ul>
             </div>
         </section>
 
     </main>
 
-    <footer class="bg-white border-t border-nido-sand mt-8 py-6">
+    <footer class="bg-white border-t-2 border-dashed border-nido-sand mt-8 py-8">
         <div class="max-w-7xl mx-auto px-4 text-center flex flex-col items-center">
-            <i class="fa-solid fa-leaf text-nido-leaf mb-2"></i>
-            <p class="text-sm text-gray-500">
+            <div class="w-12 h-12 rounded-full bg-nido-leaf/10 flex items-center justify-center mb-4">
+                <i class="fa-solid fa-leaf text-nido-leaf text-xl"></i>
+            </div>
+            <p class="text-sm text-gray-500 font-medium tracking-wide">
                 Curso académico 2025/2026. Proyecto Universitario: Organización Escolar.<br>Universidad de Málaga. Grupo 5 - C2.
             </p>
         </div>
@@ -497,13 +531,14 @@
 
             const navBtns = document.querySelectorAll('.nav-btn');
             navBtns.forEach(btn => {
+                // CORRECCIÓN DEFINITIVA: Limpieza absoluta del hover de rotación para evitar bugs
                 btn.className = "nav-btn hover:bg-nido-sand text-nido-text px-3 py-2 rounded-lg text-sm transition-all";
                 if(btn.id === 'btn-page5') btn.classList.add('font-semibold', 'text-nido-terracotta');
             });
             
             const activeBtn = document.getElementById('btn-' + pageId);
             if(activeBtn) {
-                activeBtn.className = "nav-btn bg-nido-green text-white font-semibold px-3 py-2 rounded-lg text-sm transition-all";
+                activeBtn.className = "nav-btn bg-nido-green text-white font-semibold px-3 py-2 rounded-lg text-sm transition-all shadow-sm";
             }
 
             const mobileBtns = document.querySelectorAll('.nav-btn-mobile');
@@ -516,7 +551,7 @@
                 }
             });
 
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo(0, 0);
             
             document.getElementById('mobile-menu').classList.add('hidden');
         }
