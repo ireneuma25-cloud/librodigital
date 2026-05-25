@@ -197,6 +197,74 @@
 
         <section id="page2" class="page-content">
             <div class="bg-white/90 backdrop-blur-sm rounded-[3rem] p-8 md:p-12 shadow-sm border border-nido-sand">
+                
+                <!-- REFLEXIÓN INICIAL -->
+                <h2 class="text-4xl md:text-5xl text-nido-forest mb-6 border-b-2 border-dashed border-nido-sand pb-4 flex items-center gap-3">
+                    <i class="fa-solid fa-lightbulb text-nido-mustard"></i>
+                    Reflexión Inicial: Nuestro Punto de Partida
+                </h2>
+                
+                <p class="leading-relaxed mb-8 text-gray-700 text-base md:text-lg">
+                    Antes de sumergirnos en el diseño de nuestro ecosistema, es fundamental hacer una parada reflexiva. La organización de un espacio educativo no surge del vacío, sino de nuestras concepciones previas. A continuación, respondemos de forma explícita a las cuatro cuestiones fundamentales formuladas al inicio de esta andadura:
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                    <!-- Tarjeta 1: Concepto de Organización -->
+                    <div onclick="openModal('modal-ref-organizacion')" class="bg-white/95 backdrop-blur-sm p-6 rounded-[2.5rem] border-2 border-dashed border-nido-green hover:border-nido-green cursor-pointer transition-all hover:scale-105 shadow-sm hover:shadow-md text-center w-full h-72 flex flex-col justify-between items-center group relative overflow-hidden">
+                        <div class="absolute inset-0 bg-cover bg-center opacity-5 group-hover:scale-110 transition-transform duration-700" style="background-image: url('foto-irene.jpg');"></div>
+                        <div class="relative z-10 flex flex-col items-center">
+                            <div class="w-14 h-14 bg-nido-green/10 rounded-full flex items-center justify-center mb-3 border border-nido-green/20 group-hover:bg-nido-green group-hover:text-white transition-colors duration-300">
+                                <i class="fa-solid fa-folder-open text-xl text-nido-green group-hover:text-white"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-nido-forest mb-1 leading-snug">Organización Escolar</h3>
+                            <p class="text-[11px] text-gray-600 px-1 leading-relaxed">Concepción burocrática, instrumental y puramente administrativa del centro.</p>
+                        </div>
+                        <span class="text-[10px] font-bold text-nido-green border border-nido-green/30 px-3 py-1 rounded-full bg-nido-green/5 hover:bg-nido-green hover:text-white transition-all">Ver detalles <i class="fa-solid fa-arrow-pointer ml-1"></i></span>
+                    </div>
+
+                    <!-- Tarjeta 2: Imagen de Escuela -->
+                    <div onclick="openModal('modal-ref-escuela')" class="bg-white/95 backdrop-blur-sm p-6 rounded-[2.5rem] border-2 border-dashed border-nido-terracotta hover:border-nido-terracotta cursor-pointer transition-all hover:scale-105 shadow-sm hover:shadow-md text-center w-full h-72 flex flex-col justify-between items-center group relative overflow-hidden">
+                        <div class="absolute inset-0 bg-cover bg-center opacity-5 group-hover:scale-110 transition-transform duration-700" style="background-image: url('foto-lucia.jpg');"></div>
+                        <div class="relative z-10 flex flex-col items-center">
+                            <div class="w-14 h-14 bg-nido-terracotta/10 rounded-full flex items-center justify-center mb-3 border border-nido-terracotta/20 group-hover:bg-nido-terracotta group-hover:text-white transition-colors duration-300">
+                                <i class="fa-solid fa-school text-xl text-nido-terracotta group-hover:text-white"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-nido-terracotta mb-1 leading-snug">Imagen de Escuela</h3>
+                            <p class="text-[11px] text-gray-600 px-1 leading-relaxed">Aulas cerradas, pupitres individuales y tiempos fragmentados por el timbre.</p>
+                        </div>
+                        <span class="text-[10px] font-bold text-nido-terracotta border border-nido-terracotta/30 px-3 py-1 rounded-full bg-nido-terracotta/5 hover:bg-nido-terracotta hover:text-white transition-all">Ver detalles <i class="fa-solid fa-arrow-pointer ml-1"></i></span>
+                    </div>
+
+                    <!-- Tarjeta 3: El Lugar de la Infancia -->
+                    <div onclick="openModal('modal-ref-infancia')" class="bg-white/95 backdrop-blur-sm p-6 rounded-[2.5rem] border-2 border-dashed border-nido-mustard hover:border-nido-mustard cursor-pointer transition-all hover:scale-105 shadow-sm hover:shadow-md text-center w-full h-72 flex flex-col justify-between items-center group relative overflow-hidden">
+                        <div class="absolute inset-0 bg-cover bg-center opacity-5 group-hover:scale-110 transition-transform duration-700" style="background-image: url('foto-infancia.jpg');"></div>
+                        <div class="relative z-10 flex flex-col items-center">
+                            <div class="w-14 h-14 bg-nido-mustard/10 rounded-full flex items-center justify-center mb-3 border border-nido-mustard/20 group-hover:bg-nido-mustard group-hover:text-white transition-colors duration-300">
+                                <i class="fa-solid fa-child-reaching text-xl text-nido-mustard group-hover:text-white"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-nido-forest mb-1 leading-snug">Lugar de la Infancia</h3>
+                            <p class="text-[11px] text-gray-600 px-1 leading-relaxed">Receptora pasiva de instrucción, dependiente del control del adulto.</p>
+                        </div>
+                        <span class="text-[10px] font-bold text-nido-mustard border border-nido-mustard/30 px-3 py-1 rounded-full bg-nido-mustard/5 hover:bg-nido-mustard hover:text-white transition-all">Ver detalles <i class="fa-solid fa-arrow-pointer ml-1"></i></span>
+                    </div>
+
+                    <!-- Tarjeta 4: Expectativas -->
+                    <div onclick="openModal('modal-ref-expectativas')" class="bg-white/95 backdrop-blur-sm p-6 rounded-[2.5rem] border-2 border-dashed border-nido-leaf hover:border-nido-leaf cursor-pointer transition-all hover:scale-105 shadow-sm hover:shadow-md text-center w-full h-72 flex flex-col justify-between items-center group relative overflow-hidden">
+                        <div class="absolute inset-0 bg-cover bg-center opacity-5 group-hover:scale-110 transition-transform duration-700" style="background-image: url('foto-rebeca.jpg');"></div>
+                        <div class="relative z-10 flex flex-col items-center">
+                            <div class="w-14 h-14 bg-nido-leaf/10 rounded-full flex items-center justify-center mb-3 border border-nido-leaf/20 group-hover:bg-nido-leaf group-hover:text-white transition-colors duration-300">
+                                <i class="fa-solid fa-compass text-xl text-nido-leaf group-hover:text-white"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-nido-forest mb-1 leading-snug">Expectativas</h3>
+                            <p class="text-[11px] text-gray-600 px-1 leading-relaxed">Adquisición teórica de leyes, administración y documentos formales.</p>
+                        </div>
+                        <span class="text-[10px] font-bold text-nido-leaf border border-nido-leaf/30 px-3 py-1 rounded-full bg-nido-leaf/5 hover:bg-nido-leaf hover:text-white transition-all">Ver detalles <i class="fa-solid fa-arrow-pointer ml-1"></i></span>
+                    </div>
+                </div>
+
+                <div class="border-t-2 border-dashed border-nido-sand/80 my-10"></div>
+
+                <!-- EL NACIMIENTO DEL ECOSISTEMA -->
                 <h2 class="text-4xl md:text-5xl text-nido-terracotta mb-8 border-b-2 border-dashed border-nido-sand pb-4"><i class="fa-solid fa-seedling mr-3 text-nido-leaf"></i>El nacimiento de nuestro ecosistema</h2>
                 
                 <div class="prose prose-lg max-w-none text-gray-700">
@@ -366,7 +434,7 @@
             <div class="mb-4 bg-white border border-nido-mustard/30 text-nido-mustard font-bold px-5 py-2 rounded-full text-xs uppercase tracking-wider inline-block shadow-sm">Bloque 2</div>
             <div class="mb-10 text-center md:text-left">
                 <h2 class="text-4xl md:text-5xl font-handwriting text-nido-forest mb-3">Dimensión Material: Espacios, Recursos y Tiempos</h2>
-                <p class="text-sm text-gray-600">Cómo diseñamos el entorno físico, los materiales y el ritmo cotidiano en nuestra escuela viva.</p>
+                <p class="text-sm text-gray-600">Cómo diseñamos el entorno físico, los materiales y el ritmo cotidiano en nuestra escuela viva para dar respuesta globalizada a las tres áreas de desarrollo establecidas en el <strong>artículo 8 del Decreto 100/2023, de 9 de mayo</strong> (Crecimiento en armonía; Descubrimiento y exploración del entorno; y Lenguajes: comunicación y representación de la realidad).</p>
             </div>
             
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -507,7 +575,7 @@
                         </div>
                         <h3 class="text-2xl font-bold text-nido-terracotta mb-4">Cultura del Encuentro</h3>
                         <p class="text-sm text-gray-700 leading-relaxed mb-6">
-                            Nos basamos en la <strong>"Ética del encuentro"</strong> (Dahlberg et al., 2005) y en un liderazgo democrático y horizontal. El conflicto no se reprime ni se castiga de forma autoritaria, sino que se habita de forma dialógica.
+                            Nos basamos en la <strong>"Ética del encuentro"</strong> (Dahlberg et al., 2005) y en un liderazgo democrático, horizontal y distribuido, donde el centro se constituye como un espacio de acogida y participación comunitaria (Madrid Vivar y Pascual Lacal, 2025). El conflicto no se reprime ni se castiga de forma autoritaria, sino que se habita de forma dialógica.
                         </p>
                         <ul class="space-y-3 mb-6 text-xs text-gray-600">
                             <li class="flex items-start gap-2">
@@ -556,7 +624,7 @@
                                 Evaluación Formativa e Inclusiva
                             </h3>
                             <p class="text-sm text-gray-700 leading-relaxed mb-4">
-                                Rechazamos evaluar o calificar los aprendizajes de los niños/as de forma tradicional. No se miden resultados académicos ni destrezas aisladas, garantizando una inclusión real sin etiquetas ni comparaciones académicas.
+                                Rechazamos evaluar o calificar los aprendizajes de los niños/as de forma tradicional. Conforme al <strong>artículo 11 del Decreto 100/2023, de 9 de mayo</strong>, concebimos la evaluación como un proceso global, continuo y formativo, cuyo principal instrumento es la observación directa y sistemática, garantizando una inclusión real sin etiquetas ni calificaciones académicas.
                             </p>
                             <div class="bg-[#fdf3f0]/60 p-4 rounded-xl border-l-4 border-nido-terracotta text-xs text-nido-text">
                                 <strong>¿Qué evaluamos?</strong> Si nuestro modelo organizativo (los espacios, los tiempos y los recursos) da respuesta real al interés de la infancia, promoviendo el asombro y el aprendizaje libre.
@@ -731,36 +799,134 @@
         </section>
 
         <section id="page8" class="page-content">
-            <h2 class="text-4xl text-nido-forest mb-8 flex items-center gap-3"><i class="fa-solid fa-book-open text-nido-leaf"></i> Reflexión Final y Referencias</h2>
+            <div class="mb-4 bg-white border border-nido-terracotta/30 text-nido-terracotta font-bold px-5 py-2 rounded-full text-xs uppercase tracking-wider inline-block shadow-sm">Apartados 5 y 6</div>
+            <h2 class="text-4xl md:text-5xl font-handwriting text-nido-forest mb-8 flex items-center gap-3"><i class="fa-solid fa-book-open text-nido-terracotta"></i> Conclusiones y Reflexión Final</h2>
             
-            <div class="bg-white/90 p-8 md:p-12 rounded-[3rem] shadow-sm border border-nido-sand mb-8">
-                <h3 class="text-3xl font-handwriting text-nido-terracotta mb-6 flex items-center gap-2">
-                    <i class="fa-regular fa-lightbulb text-2xl"></i> Reflexión sobre nuestro proyecto
-                </h3>
-                <div class="prose prose-lg max-w-none text-gray-700">
-                    <p class="mb-4 leading-relaxed">
-                        Llevar a la práctica este modelo organizativo nos ha demostrado la importancia vital que tienen el tiempo y el espacio en la educación. Como futuras docentes, solemos preocuparnos mucho por "qué" vamos a enseñar, olvidando que el "dónde" y el "cómo" educan de forma silenciosa pero muy potente.
-                    </p>
-                    <p class="mb-0 leading-relaxed p-6 bg-nido-sand/20 rounded-[2rem] border-l-4 border-nido-green">
-                        Diseñar la instalación del "Viaje Sensorial" nos ha permitido comprobar que cuando le ofreces a la infancia un entorno estético, seguro y respetuoso con sus ritmos, no hace falta dirigirles ni decirles constantemente lo que tienen que hacer; el aprendizaje, la concentración y el asombro surgen de forma natural y genuina.
-                    </p>
+            <!-- Tab Switcher -->
+            <div class="flex justify-center mb-8">
+                <div class="bg-nido-sand/40 p-1.5 rounded-full inline-flex border border-nido-sand/80 shadow-sm backdrop-blur-sm">
+                    <button onclick="switchReflexionTab('conclusiones')" id="tab-conclusiones" class="px-5 sm:px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 bg-nido-green text-white shadow-sm flex items-center gap-2">
+                        <i class="fa-solid fa-square-poll-vertical"></i> Conclusiones (Ap. 6)
+                    </button>
+                    <button onclick="switchReflexionTab('reflexion')" id="tab-reflexion" class="px-5 sm:px-6 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 text-nido-text hover:bg-nido-sand/60 flex items-center gap-2">
+                        <i class="fa-solid fa-graduation-cap"></i> Reflexión Final (Ap. 5)
+                    </button>
                 </div>
             </div>
 
-            <div class="bg-white p-8 md:p-10 rounded-[3rem] shadow-sm border-t-8 border-nido-sand">
+            <!-- PANEL 1: CONCLUSIONES -->
+            <div id="panel-conclusiones" class="reflexion-tab-panel animate-scale-in">
+                <div class="bg-white/90 backdrop-blur-sm rounded-[3rem] p-8 md:p-12 shadow-sm border border-nido-sand mb-8">
+                    <div class="prose prose-lg max-w-none text-gray-700">
+                        <p class="leading-relaxed mb-8 text-base md:text-lg">
+                            El proceso de diseño de <strong>"La Escuela del Reencuentro"</strong> ha supuesto una profunda reconceptualización de lo que significa organizar un centro educativo. Al conectar la teoría, la legislación y la práctica real de nuestra provocación, podemos extraer las siguientes conclusiones objetivas:
+                        </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                            <!-- Conclusion 1 -->
+                            <div class="bg-[#f2f6f3]/60 p-6 rounded-[2rem] border-t-4 border-nido-green shadow-sm">
+                                <h4 class="font-bold text-nido-forest text-base mb-3 flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-check text-nido-green"></i>
+                                    1. La organización es un acto pedagógico
+                                </h4>
+                                <p class="text-xs text-gray-600 leading-relaxed">
+                                    Hemos superado la concepción burocrática inicial. Cada decisión organizativa (la flexibilidad horaria para evitar la cronopatía, el diseño espacial abierto de Rosan Bosch y la selección de piezas sueltas) no es un mero trámite administrativo, sino una toma de postura ética y política que define qué imagen de infancia defendemos.
+                                </p>
+                            </div>
+                            
+                            <!-- Conclusion 2 -->
+                            <div class="bg-[#fdf9f3]/60 p-6 rounded-[2rem] border-t-4 border-nido-mustard shadow-sm">
+                                <h4 class="font-bold text-nido-forest text-base mb-3 flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-check text-nido-mustard"></i>
+                                    2. El valor del Ecosistema Híbrido
+                                </h4>
+                                <p class="text-xs text-gray-600 leading-relaxed">
+                                    La hibridación de líneas pedagógicas (Reggio, Bosquescuela, Pikler, Montessori, DUA) demuestra que la excelencia no consiste en aplicar una receta rígida, sino en construir un ecosistema dinámico y situado. Este modelo responde con rigor a las particularidades del contexto y protege el derecho a la diferencia.
+                                </p>
+                            </div>
+
+                            <!-- Conclusion 3 -->
+                            <div class="bg-[#fdf3f0]/60 p-6 rounded-[2rem] border-t-4 border-nido-terracotta shadow-sm">
+                                <h4 class="font-bold text-nido-terracotta text-base mb-3 flex items-center gap-2">
+                                    <i class="fa-solid fa-circle-check text-nido-terracotta"></i>
+                                    3. Coherencia Legal y Teórica
+                                </h4>
+                                <p class="text-xs text-gray-600 leading-relaxed">
+                                    El anclaje normativo (LOMLOE y Decreto 100/2023) no debe ser una imposición burocrática. Cuando se lee desde la pedagogía activa, el marco legal se convierte en el mayor garante de la inclusión real, de la globalidad de las áreas de aprendizaje y de la evaluación formativa basada en la escucha.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bg-nido-sand/20 p-6 md:p-8 rounded-[2.5rem] border-l-4 border-nido-terracotta shadow-sm mt-6">
+                            <h4 class="font-bold text-nido-forest text-lg mb-2">Idea Final Estructuradora:</h4>
+                            <p class="text-gray-800 leading-relaxed text-sm md:text-base italic m-0">
+                                "Organizar la escuela del reencuentro es, en definitiva, habilitar los tiempos para que la infancia viva el presente, cuidar los espacios para que actúen como verdaderos terceros maestros, y dar voz a los niños y niñas para co-construir una sociedad más de la escucha, democrática y participativa."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PANEL 2: REFLEXIÓN FINAL -->
+            <div id="panel-reflexion" class="reflexion-tab-panel animate-scale-in hidden">
+                <div class="bg-white/90 p-8 md:p-12 rounded-[3rem] shadow-sm border border-nido-sand mb-8">
+                    <div class="prose prose-lg max-w-none text-gray-700 space-y-6">
+                        <p class="leading-relaxed">
+                            Llevar a la práctica este modelo organizativo y diseñar la provocación del "Viaje Sensorial" nos ha transformado como profesionales de la educación. Inicialmente, nos preocupaba el control del aula y la transmisión de contenidos de manera tradicional. Hoy, entendemos que nuestro rol principal no es instruir o dirigir, sino <strong>acompañar, observar y documentar pedagógicamente</strong>, actuando como facilitadoras de un entorno preparado y seguro.
+                        </p>
+                        
+                        <div class="bg-[#fcfbf9] p-6 rounded-[2.5rem] border border-nido-sand shadow-inner my-6">
+                            <h4 class="font-bold text-nido-forest text-lg mb-4 flex items-center gap-2">
+                                <i class="fa-solid fa-triangle-exclamation text-nido-terracotta"></i> 
+                                Tensiones Reales del Modelo en el Sistema Actual
+                            </h4>
+                            
+                            <div class="space-y-4 text-sm">
+                                <div class="border-b border-dashed border-nido-sand pb-4">
+                                    <strong class="text-nido-terracotta block mb-1">1. Pareja Educativa vs. Ratios Elevadas:</strong>
+                                    <p class="text-xs text-gray-600 leading-relaxed">
+                                        El actual sistema público impone ratios de 25 alumnos por docente, dificultando la presencia de dos maestros simultáneos. Proponemos solucionar esta tensión mediante una reorganización interna del centro: derribar tabiques y crear <strong>paisajes de aprendizaje interaulas</strong>, uniendo dos o tres grupos de la misma edad en un gran espacio abierto atendido por las parejas docentes correspondientes, disolviendo el aula cajón tradicional.
+                                    </p>
+                                </div>
+                                <div class="border-b border-dashed border-nido-sand pb-4">
+                                    <strong class="text-nido-mustard block mb-1">2. Liderazgo Democrático Horizontal vs. Jerarquía Vertical Pública:</strong>
+                                    <p class="text-xs text-gray-600 leading-relaxed">
+                                        Las escuelas públicas se rigen por órganos directivos verticales e inspectores que demandan control. Para sostener un modelo participativo, es vital potenciar los <strong>equipos de ciclo y las comisiones de trabajo mixtas</strong> (docentes y familias). La documentación pedagógica se convierte en nuestra herramienta de transparencia legal, demostrando empíricamente ante la inspección que el aprendizaje competencial ocurre sin necesidad de metodologías directivas.
+                                    </p>
+                                </div>
+                                <div>
+                                    <strong class="text-nido-green block mb-1">3. Sostenibilidad de la Documentación Pedagógica vs. Sobrecarga Docente:</strong>
+                                    <p class="text-xs text-gray-600 leading-relaxed">
+                                        El registro permanente puede saturar al equipo. Proponemos una <strong>documentación selectiva y distribuida</strong>. Las parejas pedagógicas comparten la tarea: mientras un docente dinamiza, el otro observa y documenta. Además, utilizamos soportes físicos en el propio espacio (paneles de corcho interactivos y libretas de atelier) para registrar de forma orgánica durante la jornada escolar, integrándolo como un recurso del aula y no como una tarea burocrática para el hogar.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="leading-relaxed">
+                            En conclusión, nos posicionamos firmemente en defensa de la flexibilidad temporal y espacial y de la teoría de las piezas sueltas como un compromiso irrenunciable. Esta asignatura ha transformado nuestra concepción teórica inicial en un compromiso activo con el modelo defendido, preparándonos para ser las maestras que la infancia de hoy verdaderamente merece.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- REFERENCIAS BIBLIOGRÁFICAS CORREGIDAS -->
+            <div class="bg-white p-8 md:p-10 rounded-[3rem] shadow-sm border border-nido-sand">
                 <h3 class="text-xl font-bold text-gray-800 mb-6 uppercase tracking-wider text-sm flex items-center"><i class="fa-solid fa-bookmark text-nido-leaf mr-3 text-lg"></i> Referencias Bibliográficas</h3>
                 <ul class="space-y-4 text-sm text-gray-600 pl-4 list-none">
                     <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-terracotta before:rounded-full">Abad Molina, J., y Ruiz de Velasco Gálvez, Á. (2011). <em>El juego simbólico</em>. Octaedro.</li>
                     <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-mustard before:rounded-full">Bosch, R. (2018). <em>Diseñar para un mundo mejor empieza en la escuela</em>. Rosan Bosch Studio.</li>
                     <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-green before:rounded-full">Dahlberg, G., Moss, P., y Pence, A. (2005). <em>Más allá de la calidad en educación infantil</em>. Graó.</li>
-                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-leaf before:rounded-full">Decreto 100/2023, de 30 de mayo, por el que se establece la ordenación y las enseñanzas mínimas de la etapa de Educación Infantil en la Comunidad Autónoma de Andalucía. (2023). <em>BOJA, 104</em>, de 2 de junio de 2023.</li>
-                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-terracotta before:rounded-full">Hoyuelos, A. (2005). <em>La ética en el pensamiento y obra pedagógica de Loris Malaguzzi</em>. Octaedro.</li>
+                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-leaf before:rounded-full">Decreto 100/2023, de 9 de mayo, por el que se establece la ordenación y el currículo de la etapa de Educación Infantil en la Comunidad Autónoma de Andalucía. <em>BOJA, núm. 90</em>, de 15 de mayo de 2023.</li>
+                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-terracotta before:rounded-full">Hoyuelos, A. (2005). <em>La estética en el pensamiento y obra pedagógica de Loris Malaguzzi</em>. Octaedro.</li>
                     <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-mustard before:rounded-full">Ley Orgánica 3/2020, de 29 de diciembre, por la que se modifica la Ley Orgánica 2/2006, de 3 de mayo, de Educación. (2020). <em>Boletín Oficial del Estado, 340</em>, de 30 de diciembre de 2020.</li>
-                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-green before:rounded-full">Madrid Vivar, D. y Pascual Lacal, M.R (2025) (ed). <em>La cultura de la infancia como pilar de la organización escolar. Hacia una escuela sensible, sostenible e inclusiva</em>. Dykinson.</li>
+                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-green before:rounded-full">Madrid Vivar, D. y Pascual Lacal, M. R. (2025) (Eds.). <em>La cultura de la infancia como pilar de la organización escolar. Hacia una escuela sensible, sostenible e inclusiva</em>. Dykinson.</li>
                     <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-leaf before:rounded-full">Malaguzzi, L. (2001). <em>La educación infantil en Reggio Emilia</em>. Octaedro.</li>
                     <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-terracotta before:rounded-full">Nicholson, S. (1971). How not to cheat children: The theory of loose parts. <em>Landscape Architecture, 62</em>(1), 30-34.</li>
-                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-mustard before:rounded-full">Rinaldi, C. (2006). <em>En diálogo con Reggio Emilia: Escuchar, investigar y aprender</em>. Octaedro.</li>
-                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-green before:rounded-full">Trueba, B. (2017). <em>Espacios en juego</em>. Octaedro.</li>
+                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-mustard before:rounded-full">Orden de 30 de mayo de 2023, por la que se desarrolla el currículo de la etapa de Educación Infantil en la Comunidad Autónoma de Andalucía. <em>BOJA, núm. 104</em>, de 2 de junio de 2023.</li>
+                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-green before:rounded-full">Real Decreto 95/2022, de 1 de febrero, por el que se establece la ordenación y las enseñanzas mínimas de la Educación Infantil. <em>Boletín Oficial del Estado, núm. 28</em>, de 2 de febrero de 2022.</li>
+                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-leaf before:rounded-full">Rinaldi, C. (2006). <em>En diálogo con Reggio Emilia: Escuchar, investigar y aprender</em>. Octaedro.</li>
+                    <li class="relative before:content-[''] before:absolute before:-left-5 before:top-2 before:w-2 before:h-2 before:bg-nido-terracotta before:rounded-full">Trueba, B. (2017). <em>Espacios en juego</em>. Octaedro.</li>
                 </ul>
             </div>
         </section>
@@ -834,6 +1000,25 @@
             }
         }
 
+        function switchReflexionTab(tabName) {
+            document.getElementById('panel-conclusiones').classList.add('hidden');
+            document.getElementById('panel-reflexion').classList.add('hidden');
+            
+            const tabConclusiones = document.getElementById('tab-conclusiones');
+            const tabReflexion = document.getElementById('tab-reflexion');
+            
+            tabConclusiones.className = "px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 text-nido-text hover:bg-nido-sand/60 flex items-center gap-2";
+            tabReflexion.className = "px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 text-nido-text hover:bg-nido-sand/60 flex items-center gap-2";
+            
+            if (tabName === 'conclusiones') {
+                document.getElementById('panel-conclusiones').classList.remove('hidden');
+                tabConclusiones.className = "px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 bg-nido-green text-white shadow-sm flex items-center gap-2";
+            } else {
+                document.getElementById('panel-reflexion').classList.remove('hidden');
+                tabReflexion.className = "px-6 py-2.5 rounded-full text-sm font-semibold transition-all duration-300 bg-nido-green text-white shadow-sm flex items-center gap-2";
+            }
+        }
+
         // Modal triggers
         function openModal(modalId) {
             const modal = document.getElementById(modalId);
@@ -897,7 +1082,7 @@
                         Todo modelo organizativo escolar nace inevitablemente de una imagen previa de la infancia. En <strong>"La Escuela Viva del Reencuentro"</strong> rechazamos tajantemente la visión del niño como un ser incompleto o pasivo.
                     </p>
                     <p>
-                        Entendemos al niño/a como un <strong>constructor activo de cultura</strong>, un ciudadano de pleno derecho desde su nacimiento, que es capaz, fuerte y autónomo. Apoyándonos en <strong>Trueba (2017)</strong>, defendemos que la infancia no es una "sala de espera" para la vida adulta, sino una etapa vital con un valor intrínseco. Nuestra organización escolar tiene la responsabilidad de proteger ese derecho fundamental a ser niño.
+                        Entendemos al niño/a como un <strong>constructor activo de cultura</strong> y productor de su propio conocimiento (Madrid Vivar y Pascual Lacal, 2025), un ciudadano de pleno derecho desde su nacimiento, que es capaz, fuerte y autónomo. Apoyándonos en <strong>Trueba (2017)</strong>, defendemos que la infancia no es una "sala de espera" para la vida adulta, sino una etapa vital con un valor intrínseco. Nuestra organización escolar tiene la responsabilidad de proteger ese derecho fundamental a ser niño.
                     </p>
                     <p class="font-bold text-nido-forest text-lg">
                         El derecho a los "Cien Lenguajes":
@@ -947,7 +1132,7 @@
                     </p>
                     <ul class="list-disc pl-5 space-y-2 text-xs md:text-sm">
                         <li><strong>LOMLOE (Ley Orgánica 3/2020, art. 12-14):</strong> Define la Educación Infantil como una etapa única orientada a compensar desigualdades y promover el desarrollo integral.</li>
-                        <li><strong>Decreto 100/2023, de 9 de mayo (Andalucía):</strong> Regula la ordenación y el currículo de la etapa de Educación Infantil en Andalucía, estructurada en tres áreas de aprendizaje y centrada en la adquisición de competencias clave.</li>
+                        <li><strong>Decreto 100/2023, de 9 de mayo (Andalucía):</strong> Regula la ordenación y el currículo de la etapa de Educación Infantil en Andalucía. En su <strong>artículo 5 (Principios pedagógicos)</strong>, establece que la práctica educativa se basará en la experimentación, el juego, la atención a la diversidad y el respeto por los ritmos individuales de desarrollo, lo cual sustenta de manera directa nuestro modelo de escuela activa.</li>
                         <li><strong>Diseño Universal para el Aprendizaje (DUA):</strong> En nuestro centro, la inclusión real significa que es la organización (los espacios, los recursos y los tiempos) la que se adapta al niño/a, y no al revés, garantizando el <strong>"Derecho a la Diferencia"</strong>.</li>
                     </ul>
 
@@ -1014,6 +1199,114 @@
                             <p class="text-xs text-gray-600 mt-1">Diseño Universal para el Aprendizaje (DUA), garantizando que es la estructura de la escuela y su organización la que se adapta al niño, respetando el Derecho a la Diferencia.</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: REFLEXIÓN ORGANIZACIÓN -->
+    <div id="modal-ref-organizacion" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-[3rem] shadow-xl border border-nido-sand max-w-2xl w-full max-h-[90vh] overflow-y-auto relative p-8 md:p-10 animate-scale-in">
+            <button onclick="closeModal('modal-ref-organizacion')" class="absolute top-6 right-6 text-gray-400 hover:text-nido-terracotta transition-colors focus:outline-none bg-nido-sand/20 hover:bg-nido-sand/50 w-10 h-10 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div class="flex flex-col items-center">
+                <div class="w-16 h-16 bg-nido-green/10 rounded-full flex items-center justify-center mb-4 border border-nido-green/20">
+                    <i class="fa-solid fa-folder-open text-2xl text-nido-green"></i>
+                </div>
+                <h3 class="text-3xl font-handwriting text-nido-green mb-2 font-bold text-center">Concepto de Organización Escolar</h3>
+                <span class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-6 text-center">¿Qué entendíamos antes de la asignatura?</span>
+                <div class="prose text-gray-700 leading-relaxed text-sm md:text-base space-y-4 text-center max-w-lg">
+                    <p>
+                        Al comenzar la asignatura, nuestra visión de la organización escolar estaba ligada a una concepción puramente <strong>burocrática, administrativa e instrumental</strong>.
+                    </p>
+                    <p>
+                        Considerábamos que organizar un centro consistía exclusivamente en la confección de horarios rígidos, la distribución mecánica de los grupos de alumnos en sus respectivas aulas, la gestión fría del papeleo institucional y el cumplimiento estricto de las normativas vigentes. 
+                    </p>
+                    <p class="font-medium text-nido-forest">
+                        No comprendíamos que cada una de estas decisiones organizativas constituye en realidad una declaración de intenciones pedagógicas con un profundo impacto en la vida diaria de los niños y niñas.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: REFLEXIÓN ESCUELA -->
+    <div id="modal-ref-escuela" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-[3rem] shadow-xl border border-nido-sand max-w-2xl w-full max-h-[90vh] overflow-y-auto relative p-8 md:p-10 animate-scale-in">
+            <button onclick="closeModal('modal-ref-escuela')" class="absolute top-6 right-6 text-gray-400 hover:text-nido-terracotta transition-colors focus:outline-none bg-nido-sand/20 hover:bg-nido-sand/50 w-10 h-10 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div class="flex flex-col items-center">
+                <div class="w-16 h-16 bg-nido-terracotta/10 rounded-full flex items-center justify-center mb-4 border border-nido-terracotta/20">
+                    <i class="fa-solid fa-school text-2xl text-nido-terracotta"></i>
+                </div>
+                <h3 class="text-3xl font-handwriting text-nido-terracotta mb-2 font-bold text-center">Imagen Previa de Escuela</h3>
+                <span class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-6 text-center">¿Qué imagen de escuela teníamos?</span>
+                <div class="prose text-gray-700 leading-relaxed text-sm md:text-base space-y-4 text-center max-w-lg">
+                    <p>
+                        Teníamos una imagen de escuela fuertemente influenciada por nuestra propia trayectoria escolar tradicional y heredada: la <strong>escuela del control y la homogeneidad</strong>.
+                    </p>
+                    <p>
+                        Concebíamos la escuela como un espacio compartimentado en aulas cerradas de tipo "cajón", con pupitres individuales alineados de frente hacia la pizarra, tiempos rígidamente fragmentados por el sonido estridente de timbres de cambio de sesión, y un currículo uniforme y estático. 
+                    </p>
+                    <p class="font-medium text-nido-forest">
+                        Era un modelo diseñado fundamentalmente para la comodidad organizativa y el control del adulto, donde las necesidades físicas y emocionales de la infancia quedaban en un segundo plano.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: REFLEXIÓN INFANCIA -->
+    <div id="modal-ref-infancia" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-[3rem] shadow-xl border border-nido-sand max-w-2xl w-full max-h-[90vh] overflow-y-auto relative p-8 md:p-10 animate-scale-in">
+            <button onclick="closeModal('modal-ref-infancia')" class="absolute top-6 right-6 text-gray-400 hover:text-nido-terracotta transition-colors focus:outline-none bg-nido-sand/20 hover:bg-nido-sand/50 w-10 h-10 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div class="flex flex-col items-center">
+                <div class="w-16 h-16 bg-nido-mustard/10 rounded-full flex items-center justify-center mb-4 border border-nido-mustard/20">
+                    <i class="fa-solid fa-child-reaching text-2xl text-nido-mustard"></i>
+                </div>
+                <h3 class="text-3xl font-handwriting text-nido-mustard mb-2 font-bold text-center">El Lugar de la Infancia</h3>
+                <span class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-6 text-center">¿Qué lugar le reconocíamos a la infancia?</span>
+                <div class="prose text-gray-700 leading-relaxed text-sm md:text-base space-y-4 text-center max-w-lg">
+                    <p>
+                        Nuestra mirada inicial ubicaba a la infancia en una posición de <strong>receptora pasiva y dócil</strong> de la instrucción del maestro.
+                    </p>
+                    <p>
+                        El niño o niña era visto como un ser incompleto que debía ser guiado y dirigido en todo momento, adaptándose al ritmo homogéneo impuesto por el docente. Se le reconocía un papel secundario en la toma de decisiones dentro del aula, asumiendo que el adulto es el único poseedor legítimo del saber.
+                    </p>
+                    <p class="font-medium text-nido-forest">
+                        Concebíamos la etapa infantil principalmente como un territorio de preparación para la vida adulta, y no como una etapa vital con valor y derechos intrínsecos e irrenunciables.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: REFLEXIÓN EXPECTATIVAS -->
+    <div id="modal-ref-expectativas" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-[3rem] shadow-xl border border-nido-sand max-w-2xl w-full max-h-[90vh] overflow-y-auto relative p-8 md:p-10 animate-scale-in">
+            <button onclick="closeModal('modal-ref-expectativas')" class="absolute top-6 right-6 text-gray-400 hover:text-nido-terracotta transition-colors focus:outline-none bg-nido-sand/20 hover:bg-nido-sand/50 w-10 h-10 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div class="flex flex-col items-center">
+                <div class="w-16 h-16 bg-nido-leaf/10 rounded-full flex items-center justify-center mb-4 border border-nido-leaf/20">
+                    <i class="fa-solid fa-compass text-2xl text-nido-leaf"></i>
+                </div>
+                <h3 class="text-3xl font-handwriting text-nido-leaf mb-2 font-bold text-center">Nuestras Expectativas</h3>
+                <span class="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-6 text-center">¿Qué expectativas teníamos de la asignatura?</span>
+                <div class="prose text-gray-700 leading-relaxed text-sm md:text-base space-y-4 text-center max-w-lg">
+                    <p>
+                        Nuestras expectativas al iniciar el cuatrimestre eran meramente <strong>teóricas, mecánicas y organizacionales</strong>.
+                    </p>
+                    <p>
+                        Esperábamos memorizar artículos de leyes educativas vigentes, comprender la jerarquía formal de la dirección y administración de centros, y aprender a rellenar documentos formales como la Programación General Anual.
+                    </p>
+                    <p class="font-medium text-nido-forest">
+                        No esperábamos descubrir que la gestión de los elementos organizativos (los espacios, los recursos y los tiempos) constituye en sí misma una profunda declaración ética, estética y política de resistencia frente a la deshumanización de la escuela tradicional.
+                    </p>
                 </div>
             </div>
         </div>
